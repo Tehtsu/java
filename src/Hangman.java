@@ -102,6 +102,7 @@ public class Hangman {
             // if word is found game ends otherwise game is over
             if (guessed){
                 System.out.println("Du hast das gesuchte " + guessingWord[rndNumber] + " gefunden!");
+                break;
             } else if (attempt == maxTry) {
                 System.out.println("Kein verbleibenden Versuche mehr! Game Over");
                 break;
@@ -118,9 +119,11 @@ public class Hangman {
                     if (solveWord.equalsIgnoreCase(guessingWord[rndNumber])) {
                         System.out.println("Du hast das gesuchte Wort " + guessingWord[rndNumber] + " gefunden!");
                         guessed = true;
+                        break;
                     } else {
                         System.out.println("Dein Wort " + solveWord + " ist leider nicht das richtige Wort.");
                         System.out.println("Gesucht war das Wort " + guessingWord[rndNumber]);
+                        break;
                     }
                 }
             }
